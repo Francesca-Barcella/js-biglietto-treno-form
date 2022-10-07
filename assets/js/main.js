@@ -71,11 +71,10 @@ const under18Input = document.getElementById('under18');
 const over65Input = document.getElementById('over65');
 const travelerAgeInput = document.getElementById('age');
 
-console.log('eta del viaggiatore minorenne', under18Input);
+/* console.log('eta del viaggiatore minorenne', under18Input);
 console.log('eta del viaggiatore over65', over65Input);
 console.log('eta del viaggiatore', travelerAgeInput);
-
-//console.log('travelKmsInput', travelKmsInput);
+console.log('travelKmsInput', travelKmsInput); */
 
 const btngenerator = document.getElementById('genera');
 const priceKm = 0.21;
@@ -110,16 +109,26 @@ btngenerator.addEventListener('click', function () {
     console.log('il prezzo totale per gli over65 è:', discount40);
 
     // definizione fasce età
+    if (under18Input == Minorenne) {
+        /*   document.getElementById('under18').innerHTML='Sconto per minorenni'; */
+        console.log('sei minorenne');
+
+    }
 
 
     //offerta
-    
+
 
     // numero carrozza
     document.getElementById('ticket_position').innerHTML = Math.floor((Math.random() * 10) + 1);
 
     //Codice cp
     document.getElementById('ticket_code').innerHTML = Math.floor((Math.random() * 10000) + 1);
+
+    // prezzo biglietto
+    
 })
+
+
 
 
