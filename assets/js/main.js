@@ -68,28 +68,40 @@ if (isNaN(ticketPrice)) {
 const travelerNameInput = document.getElementById('name');
 const travelKmsInput = document.getElementById('kms');
 const travelerAgeInput = document.getElementById('age');
+//console.log('travelKmsInput', travelKmsInput);
 
-console.log('travelKmsInput', travelKmsInput);
-
-
-const btngenerator = document.getElementById ('genera');
-
+const btngenerator = document.getElementById('genera');
 const priceKm = 0.21;
 
+
 //1° - attiva evento click
-btngenerator.addEventListener ('click', function(){
+btngenerator.addEventListener('click', function () {
     console.log('hai cliccato il pulsante');
 
     const travelerName = travelerNameInput.value;
     console.log('traveler Name value', travelerNameInput.value);
-   
+
     const travelKms = travelKmsInput.value;
     console.log('travel Kms value', travelKmsInput.value);
-    
+
     const travelerAge = travelerAgeInput.value;
     console.log('traveler Age value', travelerAgeInput.value);
 
     document.getElementById('ticket_name').innerHTML = travelerName;
+
+    // discount none
+    const priceTotalKms = priceKm * travelKmsInput.value;
+    console.log(priceTotalKms);
+
+    // discount 20%
+    const discount20 = travelKmsInput * 20 / 100;
+    const priceLess20 = priceTotalKms - discount20;
+    const priceLess20Round = priceLess20.toFixed(2);
+    console.log('il prezzo -20% arrotondato è:', priceLess20Round);
+
+
+    // numero carrozza
+    document.getElementById('ticket_position').innerHTML = Math.floor((Math.random() * 10) + 1);
 })
 
 
