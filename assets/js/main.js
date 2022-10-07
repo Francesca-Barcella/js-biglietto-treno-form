@@ -65,18 +65,27 @@ if (isNaN(ticketPrice)) {
 /* RESTART */
 
 //2° - pesca le variabili dagli input
-const travelerName = document.getElementById('name');
-const travelKms = document.getElementById('kms');
-const travelerAge = document.getElementById('age');
-console.log(travelerName, travelKms, travelerAge);
+const travelerNameInput = document.getElementById('name');
+const travelKmsInput = document.getElementById('kms');
+const travelerAgeInput = document.getElementById('age');
+
+console.log('travelKmsInput', travelKmsInput);
+
 
 const btngenerator = document.getElementById ('genera');
-console.log(btngenerator);
 
 const priceKm = 0.21;
 
 //1° - attiva evento click
 btngenerator.addEventListener ('click', function(){
     console.log('hai cliccato il pulsante');
-     
+
+    const travelerName = travelerNameInput.value;
+    console.log('traveler Name value', travelerNameInput.value);
+   
+    const travelKms = travelKmsInput.value;
+    console.log('travel Kms value', travelKmsInput.value);
+    
+    const travelerAge = travelerAgeInput.value;
+    console.log('traveler Age value', travelerAgeInput.value);
 })
