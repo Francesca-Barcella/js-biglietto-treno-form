@@ -90,18 +90,23 @@ btngenerator.addEventListener('click', function () {
     document.getElementById('ticket_name').innerHTML = travelerName;
 
     // discount none
-    const priceTotalKms = priceKm * travelKmsInput.value;
-    console.log(priceTotalKms);
+    const discountNone = travelKmsInput.value * priceKm;
+    console.log('il prezzo totale dei km è:', discountNone);
+
+     
 
     // discount 20%
-    const discount20 = travelKmsInput * 20 / 100;
+   /*  const discount20 = travelKmsInput * 20 / 100;
     const priceLess20 = priceTotalKms - discount20;
     const priceLess20Round = priceLess20.toFixed(2);
-    console.log('il prezzo -20% arrotondato è:', priceLess20Round);
+    console.log('il prezzo -20% arrotondato è:', priceLess20Round); */
 
 
     // numero carrozza
     document.getElementById('ticket_position').innerHTML = Math.floor((Math.random() * 10) + 1);
+
+    //Codice cp
+    document.getElementById('ticket_code').innerHTML = Math.floor((Math.random() * 10000) + 1);
 })
 
 
