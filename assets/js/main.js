@@ -64,17 +64,23 @@ if (isNaN(ticketPrice)) {
 
 /* RESTART */
 
-//2° - pesca le variabili dagli input
+//1° - pesca le variabili dagli input
 const travelerNameInput = document.getElementById('name');
 const travelKmsInput = document.getElementById('kms');
+const under18Input = document.getElementById('under18');
+const over65Input = document.getElementById('over65');
 const travelerAgeInput = document.getElementById('age');
+
+console.log('eta del viaggiatore minorenne', under18Input);
+console.log('eta del viaggiatore over65', over65Input);
+console.log('eta del viaggiatore', travelerAgeInput);
+
 //console.log('travelKmsInput', travelKmsInput);
 
 const btngenerator = document.getElementById('genera');
 const priceKm = 0.21;
 
-
-//1° - attiva evento click
+//2° - attiva evento click
 btngenerator.addEventListener('click', function () {
     console.log('hai cliccato il pulsante');
 
@@ -103,6 +109,11 @@ btngenerator.addEventListener('click', function () {
     const discount40 = (discountNone - less40).toFixed(2);
     console.log('il prezzo totale per gli over65 è:', discount40);
 
+    // definizione fasce età
+
+
+    //offerta
+    
 
     // numero carrozza
     document.getElementById('ticket_position').innerHTML = Math.floor((Math.random() * 10) + 1);

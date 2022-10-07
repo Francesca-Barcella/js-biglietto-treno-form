@@ -15,7 +15,13 @@
         <h2>CALCOLCA IL PREZZO DEL TUO BIGLIETTO</h2>
         <input id="name" type="text" name="nome e cognome" placeholder="nome e cognome" value="">
         <input id="kms" type="text" placeholder="km da percorrere" value="">
-        <input id="age" type="text" placeholder="fascia d'età" value="">
+        <!-- <input id="age" type="text" placeholder="fascia d'età" value=""> -->
+        <select name="fascie d'eta">
+            <option value="minorenne" id="under18">Minorenne</option>
+            <option value="18-65" id="age">18-65</option>
+            <option value="over 65" id="over65">Over 65</option>
+        </select>
+   
     </div>
     <div class="container">
         <button id="genera">GENERA</button>
