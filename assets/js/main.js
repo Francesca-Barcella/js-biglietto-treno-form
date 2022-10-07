@@ -93,13 +93,15 @@ btngenerator.addEventListener('click', function () {
     const discountNone = travelKmsInput.value * priceKm;
     console.log('il prezzo totale dei km è:', discountNone);
 
-     
-
     // discount 20%
-   /*  const discount20 = travelKmsInput * 20 / 100;
-    const priceLess20 = priceTotalKms - discount20;
-    const priceLess20Round = priceLess20.toFixed(2);
-    console.log('il prezzo -20% arrotondato è:', priceLess20Round); */
+    const less20 = discountNone * 20 / 100;
+    const discount20 = (discountNone - less20).toFixed(2);
+    console.log('il prezzo totale per i minorenni è:', discount20);
+
+    // discount 40%
+    const less40 = discountNone * 40 / 100;
+    const discount40 = (discountNone - less40).toFixed(2);
+    console.log('il prezzo totale per gli over65 è:', discount40);
 
 
     // numero carrozza
