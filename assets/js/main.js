@@ -64,3 +64,8 @@ if (isNaN(ticketPrice)) {
 
 /* RESTART */
 
+const btngenerator = document.getElementById ('genera');
+
+btngenerator.addEventListener ('click', function(){
+    console.log('hai cliccato il pulsante');
+})
