@@ -10,7 +10,7 @@ va applicato uno sconto del 40% per gli over 65.
 
 MILESTONE 1:
 Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra.
-La risposta finale (o output) sarà anch’essa da scrivere in console.
+La risposta finale (o output) sarà anch’essa da scrivere in francescaconsole.
 
 MILESTONE 2:
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
@@ -64,7 +64,16 @@ if (isNaN(ticketPrice)) {
 
 /* RESTART */
 
+//2° - pesca le variabili dagli input
+const travelerName = document.getElementById('name');
+const travelKms = document.getElementById('kms');
+const travelerAge = document.getElementById('age');
+console.log(travelerName, travelKms, travelerAge);
+
 const btngenerator = document.getElementById ('genera');
+console.log(btngenerator);
+
+//1° - attiva evento click
 
 btngenerator.addEventListener ('click', function(){
     console.log('hai cliccato il pulsante');
