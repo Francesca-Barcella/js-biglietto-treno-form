@@ -20,7 +20,29 @@ Nota: Se non vi sentite particolarmente creativi, questa potrebbe essere un’im
 Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 ********************************************************************/
 
-// 1 ° chiedere all'utente il n° di km e l'età
+// 1° - chiedere all'utente il n° di km e l'età
 const kms = Number(prompt('Quanti km devi percorrere?'));
 const travelerAge = Number(prompt('Quanti anni hai?'));
 console.log(kms, travelerAge);
+
+// 2° - calcolo dei prezzi e degli sconti
+const priceEl = document.getElementById('price');
+const priceKm = 0.21;
+let = discount, ticketPrice;
+
+// 2.a - sconto del 20% per minorenni
+if (travelerAge < 18) {
+    discount = 0.2
+    // 2.b - sconto del 40% per over65
+} else if (travelerAge < 65) {
+    // 2.c - nessuno sconto
+    discount = 0.4
+} else {
+    discount = 0
+}
+
+// 2.d - calcolo prezzo scontato
+const totalDiscount = ticketPrice * discount;
+ticketPrice = ticketPrice - totalDiscount;
+
+
