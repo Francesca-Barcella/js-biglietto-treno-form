@@ -28,21 +28,33 @@ console.log(kms, travelerAge);
 // 2° - calcolo dei prezzi e degli sconti
 const priceEl = document.getElementById('price');
 const priceKm = 0.21;
-let = discount, ticketPrice;
+let ticketPrice = kms * priceKm;
+console.log(priceKm, ticketPrice);
 
 // 2.a - sconto del 20% per minorenni
 if (travelerAge < 18) {
-    discount = 0.2
+    discount = 0.2;
     // 2.b - sconto del 40% per over65
 } else if (travelerAge < 65) {
     // 2.c - nessuno sconto
-    discount = 0.4
+    discount = 0.4;
 } else {
-    discount = 0
+    discount = 0;
 }
 
 // 2.d - calcolo prezzo scontato
-const totalDiscount = ticketPrice * discount;
-ticketPrice = ticketPrice - totalDiscount;
+const discountAmount = ticketPrice * discount;
+ticketPrice = ticketPrice - discountAmount;
+console.log(discountAmount);
+
+// 2.e - correzione se non inseriscono numeri e arrotondamento a 2 decimali del prezzo
+if (isNaN(ticketPrice)) {
+    alert('Attenzione! Inserisci un valore numerico per i km da percorre.');
+    priceEl.innerHTML = `Ops! c'é stato un problema! Riprova.`;
+
+} else {
+    priceEl.innerHTML = `€ ${ticketPrice.toFixed(2)}`;
+}
+
 
 
