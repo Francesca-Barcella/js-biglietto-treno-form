@@ -73,8 +73,10 @@ console.log(travelerName, travelKms, travelerAge);
 const btngenerator = document.getElementById ('genera');
 console.log(btngenerator);
 
-//1° - attiva evento click
+const priceKm = 0.21;
 
+//1° - attiva evento click
 btngenerator.addEventListener ('click', function(){
     console.log('hai cliccato il pulsante');
+     
 })
