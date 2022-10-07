@@ -5,3 +5,8 @@ body{
 .container{
     margin-top: 2rem;
 }
+
+.d_flex{
+    display: flex;
+    justify-content: space-between;
+}

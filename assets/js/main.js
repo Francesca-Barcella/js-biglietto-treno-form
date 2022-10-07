@@ -88,4 +88,8 @@ btngenerator.addEventListener ('click', function(){
     
     const travelerAge = travelerAgeInput.value;
     console.log('traveler Age value', travelerAgeInput.value);
+
+    document.getElementById('ticket_name').innerHTML = travelerName;
 })
+
+
