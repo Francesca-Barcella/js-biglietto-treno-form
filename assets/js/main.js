@@ -20,6 +20,10 @@ Nota: Se non vi sentite particolarmente creativi, questa potrebbe essere un’im
 Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 ********************************************************************/
 
+
+/* INIZIO SBAGLIATO */
+/*******************************
+
 // 1° - chiedere all'utente il n° di km e l'età
 const kms = Number(prompt('Quanti km devi percorrere?'));
 const travelerAge = Number(prompt('Quanti anni hai?'));
@@ -54,7 +58,9 @@ if (isNaN(ticketPrice)) {
 
 } else {
     priceEl.innerHTML = `€ ${ticketPrice.toFixed(2)}`;
-}
+} 
 
+*******************************/
 
+/* RESTART */
 
