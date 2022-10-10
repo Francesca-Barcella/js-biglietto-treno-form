@@ -108,17 +108,9 @@ btngenerator.addEventListener('click', function () {
     const discount40 = (discountNone - less40).toFixed(2);
     console.log('il prezzo totale per gli over65 è:', discount40);
 
-    // definizione fasce età
-    if (under18Input == Minorenne) {
-        /*   document.getElementById('under18').innerHTML='Sconto per minorenni'; */
-        console.log('sei minorenne');
-
-    }
-
-
     //offerta
-
-
+    document.getElementById('ticket_offer').innerHTML = (`Sconto ${travelerAge}`);
+    
     // numero carrozza
     document.getElementById('ticket_position').innerHTML = Math.floor((Math.random() * 10) + 1);
 
@@ -126,7 +118,8 @@ btngenerator.addEventListener('click', function () {
     document.getElementById('ticket_code').innerHTML = Math.floor((Math.random() * 10000) + 1);
 
     // prezzo biglietto
-    
+
+
 })
 
 
