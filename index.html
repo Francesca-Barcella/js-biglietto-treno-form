@@ -14,14 +14,14 @@
     <div>
         <h2>CALCOLCA IL PREZZO DEL TUO BIGLIETTO</h2>
         <input id="name" type="text" name="nome e cognome" placeholder="nome e cognome" value="">
-        <input id="kms" type="text" placeholder="km da percorrere" value="">
+        <input id="kms" type="text" name="km" placeholder="km da percorrere" value="">
         <!-- <input id="age" type="text" placeholder="fascia d'età" value=""> -->
         <select name="fascie d'eta" id="age">
             <option value="minorenne" id="under18">Minorenne</option>
-            <option value="18-65" id="age">18-65</option>
-            <option value="over 65" id="over65">Over 65</option>
+            <option value="18-65" id="maggiorenne">Maggiorenne</option>
+            <option value="over65" id="over65">Over 65</option>
         </select>
-   
+
     </div>
     <div class="container">
         <button id="genera">GENERA</button>
@@ -31,13 +31,27 @@
     <div class="container">
         <h2>DETTAGLIO PASSEGGERI</h2>
         <div class="d_flex">
-            <h3>NOME PASSEGGERO <div id="ticket_name">-</div></h3>
-            <h3>Offerta<div id="ticket_offer">-</div></h3>
-            <h3>Carrozza<div id="ticket_position">-</div></h3>
-            <h3>Codice Cp<div id="ticket_code">-</div></h3>
-            <h3>Costo Biglietto<div id="ticket_price">-</div></h3>
+            <div class="ticket_name">
+                <h3>NOME PASSEGGERO</h3>
+                <p></p>
+            </div>
+            <div class="ticket_offer">
+                <h3>Offerta</h3>
+                <p></p>
+            </div>
+            <div class="ticket_position">
+                <h3>Carrozza</h3>
+                <p></p>
+            </div>
+            <div class="ticket_code">
+                <h3>Codice Cp</h3>
+                <p></p>
+            </div>
+            <div class="ticket_price">
+                <h3>Costo Biglietto</h3>
+                <p></p>
+            </div>
         </div>
-        
     </div>
 
 

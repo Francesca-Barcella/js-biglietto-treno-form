@@ -76,52 +76,77 @@ console.log('eta del viaggiatore over65', over65Input);
 console.log('eta del viaggiatore', travelerAgeInput);
 console.log('travelKmsInput', travelKmsInput); */
 
-const btngenerator = document.getElementById('genera');
+const btnGenerator = document.getElementById('genera');
+const btnCancel = document.getElementById('annulla');
 const priceKm = 0.21;
 
 //2° - attiva evento click
-btngenerator.addEventListener('click', function () {
-    console.log('hai cliccato il pulsante');
+btnGenerator.addEventListener('click', function () {
+    //console.log('hai cliccato il pulsante genera');
 
     const travelerName = travelerNameInput.value;
-    console.log('traveler Name value', travelerNameInput.value);
+    //console.log('traveler Name value', travelerNameInput.value);
 
     const travelKms = travelKmsInput.value;
-    console.log('travel Kms value', travelKmsInput.value);
+    //console.log('travel Kms value', travelKmsInput.value);
 
     const travelerAge = travelerAgeInput.value;
-    console.log('traveler Age value', travelerAgeInput.value);
-
-    document.getElementById('ticket_name').innerHTML = travelerName;
+    //console.log('traveler Age value', travelerAgeInput.value);
 
     // discount none
-    const discountNone = travelKmsInput.value * priceKm;
-    console.log('il prezzo totale dei km è:', discountNone);
+    const discountNone = (travelKmsInput.value * priceKm).toFixed(2);
+    //console.log('il prezzo totale dei km è:', discountNone);
 
     // discount 20%
     const less20 = discountNone * 20 / 100;
     const discount20 = (discountNone - less20).toFixed(2);
-    console.log('il prezzo totale per i minorenni è:', discount20);
+    //console.log('il prezzo totale per i minorenni è:', discount20);
 
     // discount 40%
     const less40 = discountNone * 40 / 100;
     const discount40 = (discountNone - less40).toFixed(2);
-    console.log('il prezzo totale per gli over65 è:', discount40);
+    //console.log('il prezzo totale per gli over65 è:', discount40);
+
+    //nome passeggero
+    document.querySelector('.ticket_name>p').innerHTML = travelerName;
 
     //offerta
-    document.getElementById('ticket_offer').innerHTML = (`Sconto ${travelerAge}`);
-    
-    // numero carrozza
-    document.getElementById('ticket_position').innerHTML = Math.floor((Math.random() * 10) + 1);
+    if (travelerAge == 'minorenne') {
+        document.querySelector('.ticket_offer>p').innerHTML = 'Socnto Minorenne';
+    } else if (travelerAge == 'over65') {
+        document.querySelector('.ticket_offer>p').innerHTML = 'Sconto Over65';
+    } else {
+        document.querySelector('.ticket_offer>p').innerHTML = 'Prezzo Pieno';
+    }
 
-    //Codice cp
-    document.getElementById('ticket_code').innerHTML = Math.floor((Math.random() * 10000) + 1);
+    //numero carrozza
+    document.querySelector('.ticket_position>p').innerHTML = Math.floor((Math.random() * 10) + 1);
+
+    //numero carrozza
+    document.querySelector('.ticket_code>p').innerHTML = Math.floor((Math.random() * 10000) + 1);
 
     // prezzo biglietto
-
+    if (travelerAge == 'minorenne') {
+        document.querySelector('.ticket_price>p').innerHTML = '€' + discount20;
+    } else if (travelerAge == 'over65') {
+        document.querySelector('.ticket_price>p').innerHTML = '€' + discount40;
+    } else {
+        document.querySelector('.ticket_price>p').innerHTML = '€' + discountNone;
+    }
 
 })
 
+btnCancel.addEventListener('click', function () {
+    console.log('hai cliccato il pulsante annulla');
+})
 
 
+/*
+//offerta
+document.getElementById('ticket_offer > p').innerHTML = (`Sconto ${travelerAge}`);
 
+// numero carrozza
+document.getElementById('ticket_position > p').innerHTML = Math.floor((Math.random() * 10) + 1);
+
+//Codice cp
+document.getElementById('ticket_code > p').innerHTML = Math.floor((Math.random() * 10000) + 1); */
