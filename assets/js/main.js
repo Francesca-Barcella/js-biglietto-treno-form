@@ -76,13 +76,15 @@ console.log('eta del viaggiatore over65', over65Input);
 console.log('eta del viaggiatore', travelerAgeInput);
 console.log('travelKmsInput', travelKmsInput); */
 
-const btnGenerator = document.getElementById('genera');
+const btnGenerator = document.querySelector('form');
 const btnCancel = document.getElementById('annulla');
 const priceKm = 0.21;
 
 //2° - attiva evento click
-btnGenerator.addEventListener('click', function () {
+btnGenerator.addEventListener('submit', function (e) {
     //console.log('hai cliccato il pulsante genera');
+    console.log(e);
+    e.preventDefault();
 
     const travelerName = travelerNameInput.value;
     //console.log('traveler Name value', travelerNameInput.value);
@@ -136,8 +138,11 @@ btnGenerator.addEventListener('click', function () {
 
 })
 
-btnCancel.addEventListener('click', function () {
+btnCancel.addEventListener('click', function (e) {
     console.log('hai cliccato il pulsante annulla');
+    travelerName = '';
+    travelKms = '';
+    travelerAge = '';
 })
 
 

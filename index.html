@@ -13,20 +13,22 @@
 <body>
     <div>
         <h2>CALCOLCA IL PREZZO DEL TUO BIGLIETTO</h2>
-        <input id="name" type="text" name="nome e cognome" placeholder="nome e cognome" value="">
-        <input id="kms" type="text" name="km" placeholder="km da percorrere" value="">
-        <!-- <input id="age" type="text" placeholder="fascia d'età" value=""> -->
-        <select name="fascie d'eta" id="age">
-            <option value="minorenne" id="under18">Minorenne</option>
-            <option value="18-65" id="maggiorenne">Maggiorenne</option>
-            <option value="over65" id="over65">Over 65</option>
-        </select>
-
+        <form>
+            <input id="name" type="text" name="nome e cognome" placeholder="nome e cognome" value="">
+            <input id="kms" type="text" name="km" placeholder="km da percorrere" value="">
+            <!-- <input id="age" type="text" placeholder="fascia d'età" value=""> -->
+            <select name="fascie d'eta" id="age">
+                <option value="minorenne" id="under18">Minorenne</option>
+                <option value="18-65" id="maggiorenne">Maggiorenne</option>
+                <option value="over65" id="over65">Over 65</option>
+            </select>
+            <div class="container">
+                <button type="submit">GENERA</button>
+                <button id="annulla">ANNULLA</button>
+            </div>
+        </form>
     </div>
-    <div class="container">
-        <button id="genera">GENERA</button>
-        <button id="annulla">ANNULLA</button>
-    </div>
+    
 
     <div class="container">
         <h2>DETTAGLIO PASSEGGERI</h2>
